@@ -2,3 +2,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-900 text-white font-sans;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-slate-800 rounded-xl shadow-lg border border-slate-700 p-6;
+    }
+
+    .btn-primary {
+        @apply bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium transition-colors shadow-[0_0_15px_rgba(59, 130, 246, 0.3)];
+    }
+
+    .btn-secondary {
+        @apply bg-transparent border border-slate-600 hover:border-slate-400 text-white px-4 py-2 rounded-md font-medium transition-colors;
+    }
+
+    .glass-panel {
+        @apply bg-slate-800/80 backdrop-blur-md rounded-xl shadow-lg border border-slate-700/50 p-6;
+    }
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-600;
+}
